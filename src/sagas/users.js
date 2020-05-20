@@ -10,7 +10,7 @@ function* getUsers() {
 }
 
 function* watchGetUsersRequest() {
-  yield takeEvery(action.Types.GET_USERS_REQUEST, getUsers);
+  yield takeEvery(actions.Types.GET_USERS_REQUEST, getUsers);
 }
 
 const userSagas = [fork(watchGetUsersRequest)];
