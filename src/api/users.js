@@ -9,3 +9,5 @@ export const getUsers = () =>
 
 export const createUser = ({ firstName, lastName }) =>
   axios.post('/users', { firstName, lastName });
+
+export const deleteUser = (userId) => axios.delete(`/users/${userId}`);
